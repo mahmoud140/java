@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.effect.Bloom;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import static javax.management.Query.value;
@@ -24,8 +25,6 @@ import static javax.management.Query.value;
  * @author Mohamed
  */
 public class TicTacTrial implements Initializable {
-    @FXML
-    private javafx.scene.control.Button btn1;
     @FXML
     private AnchorPane rootPane;
     @FXML
@@ -47,10 +46,16 @@ public class TicTacTrial implements Initializable {
     private Label box8;
     @FXML
     private Label box9;
+    @FXML
+    private Label player1;
+    @FXML
+    private Label player2;
     private String turn="x";
     private boolean flag=true;
     private String[][] values=new String [3][3];
     private boolean playable=true;
+    Bloom bloom=new Bloom();
+    
     void check(){
         if(flag)
             turn="x";
@@ -63,7 +68,7 @@ public class TicTacTrial implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        player1.setEffect(bloom);
     }    
     
     
@@ -83,6 +88,13 @@ public class TicTacTrial implements Initializable {
     @FXML
     private void box1(MouseEvent event) {
         if(playable){
+        if(turn.equals("x")){
+            player1.setEffect(null);
+            player2.setEffect(bloom);}
+        else{
+            player1.setEffect(bloom);
+            player2.setEffect(null);
+        }
         box1.setAlignment(Pos.CENTER);
         if(box1.getText().equals("")){
         box1.setText(turn);

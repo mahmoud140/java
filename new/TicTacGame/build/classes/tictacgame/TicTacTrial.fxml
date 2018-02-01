@@ -35,12 +35,12 @@
          <top>
             <Pane prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="14.0" layoutY="13.0" prefHeight="29.0" prefWidth="91.0" style="-fx-border-color: #000000;" text="Player1 X" textFill="#4d1a67">
+                  <Label fx:id="player1" layoutX="14.0" layoutY="13.0" prefHeight="29.0" prefWidth="91.0" style="-fx-border-color: #000000; -fx-background-color: #530b79;" text="Player1 X" textFill="WHITE">
                      <font>
                         <Font name="Franklin Gothic Medium Italic" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="158.0" layoutY="13.0" prefHeight="29.0" prefWidth="95.0" style="-fx-border-color: #000000;" text="Player2 O" textFill="#4d1a67">
+                  <Label fx:id="player2" layoutX="454.0" layoutY="13.0" prefHeight="29.0" prefWidth="95.0" style="-fx-border-color: #000000; -fx-background-color: #530b79;" text="Player2 O" textFill="WHITE">
                      <font>
                         <Font name="Franklin Gothic Medium Italic" size="20.0" />
                      </font>
@@ -74,7 +74,7 @@
                   </BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1">
                      <center>
-                        <Button fx:id="btn1" mnemonicParsing="false" onMouseClicked="#box2" prefHeight="109.0" prefWidth="219.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+                        <Button mnemonicParsing="false" onMouseClicked="#box2" prefHeight="109.0" prefWidth="219.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                            <graphic>
                               <Label fx:id="box2" ellipsisString="" prefHeight="74.0" prefWidth="182.0" text="                    " textAlignment="RIGHT">
                                  <font>
