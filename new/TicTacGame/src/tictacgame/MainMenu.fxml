@@ -15,6 +15,14 @@
             <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('C:\Users\pc\Desktop\bg.jpg');">
                <children>
                   <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="237.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#newGame" prefHeight="42.0" prefWidth="127.0" text="New Game ">
+                     <font>
+                        <Font name="Franklin Gothic Medium Italic" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                   <Button layoutX="237.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#resume" prefHeight="39.0" prefWidth="127.0" text="Resume">
                      <font>
                         <Font name="Franklin Gothic Medium Italic" size="20.0" />
@@ -24,14 +32,6 @@
                      </cursor>
                   </Button>
                   <Button cancelButton="true" layoutX="235.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="39.0" prefWidth="130.0" text="Exit">
-                     <font>
-                        <Font name="Franklin Gothic Medium Italic" size="20.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button layoutX="237.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#newGame" prefHeight="42.0" prefWidth="127.0" text="New Game ">
                      <font>
                         <Font name="Franklin Gothic Medium Italic" size="20.0" />
                      </font>
