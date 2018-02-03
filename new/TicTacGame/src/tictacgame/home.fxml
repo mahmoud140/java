@@ -48,7 +48,7 @@
                <center>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('C:\Users\pc\Desktop\bg.jpg');">
                      <children>
-                        <ImageView fitHeight="304.0" fitWidth="447.0" layoutX="90.0" layoutY="67.0" pickOnBounds="true">
+                        <ImageView fitHeight="246.0" fitWidth="447.0" layoutX="90.0" layoutY="67.0" pickOnBounds="true">
                            <image>
                               <Image url="@board2.jpg" />
                            </image>
@@ -56,14 +56,14 @@
                               <DropShadow color="#f0e4afba" height="59.3" radius="25.445" spread="0.66" width="44.48" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="120.0" layoutY="115.0" prefHeight="64.0" prefWidth="171.0" text="Enter Name" textFill="WHITE">
+                        <Label layoutX="120.0" layoutY="90.0" prefHeight="64.0" prefWidth="171.0" text="Enter Name" textFill="WHITE">
                            <font>
                               <Font name="Chiller" size="44.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="317.0" layoutY="132.0" prefHeight="45.0" prefWidth="175.0" promptText="username" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="username" />
-                        <TextField layoutX="319.0" layoutY="225.0" prefHeight="45.0" prefWidth="175.0" promptText="password" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="password" />
-                        <Label layoutX="130.0" layoutY="210.0" prefHeight="64.0" prefWidth="185.0" text="Enter Passord" textFill="WHITE">
+                        <TextField layoutX="317.0" layoutY="106.0" prefHeight="45.0" prefWidth="175.0" promptText="username" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="username" />
+                        <TextField layoutX="319.0" layoutY="199.0" prefHeight="45.0" prefWidth="175.0" promptText="password" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="password" />
+                        <Label layoutX="130.0" layoutY="181.0" prefHeight="64.0" prefWidth="185.0" text="Enter Passord" textFill="WHITE">
                            <font>
                               <Font name="Chiller" size="44.0" />
                            </font>
