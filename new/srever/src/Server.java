@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.io.Serializable;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
@@ -22,7 +25,7 @@ import java.util.logging.Logger;
  *
  * @author Mahmoud
  */
-public class Server {
+public class Server implements Serializable{
     private ServerSocket serverSocket;
     private Socket socket;
     public static void main(String[] args) throws IOException
@@ -33,46 +36,59 @@ public class Server {
     public Server() throws IOException
     {
         serverSocket=new ServerSocket(5005);
-        socket=serverSocket.accept();
-        new Handel(socket);
+        while(true)
+        {
+            
+             socket=serverSocket.accept();
+             new Handel(socket);
+        }
+        
     }
 }
 class Handel extends Thread
 {
-    ObjectInputStream ois;
-    ObjectOutputStream oos;
+    DataInputStream dis;
+    PrintStream dos;
     static Vector<Handel> players=new Vector<Handel>();
     public Handel(Socket s) 
     {
         try {
-            ois=new ObjectInputStream(s.getInputStream());
-            oos=new ObjectOutputStream(s.getOutputStream());
+            dos=new PrintStream(s.getOutputStream());
+            dis=new DataInputStream(s.getInputStream());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        
         players.add(this);
         start();
     }
     @Override
     public void run()
     {
+      
        while(true)
       {
+//       if(!(players.size()<2)){
         try {
-            Label labelName=(Label)ois.readObject();
-            send(labelName);
+//            String value=dis.readLine();
+            String fxid=dis.readLine();
+            System.out.println(fxid);
+//            System.out.println(value);
+            send(fxid);
+//            send(value);
         } 
-          catch (ClassNotFoundException | IOException ex) {
-               Logger.getLogger(Handel.class.getName()).log(Level.SEVERE, null, ex);
+          catch (IOException ex) {
+              // Logger.getLogger(Handel.class.getName()).log(Level.SEVERE, null, ex);
+               players.remove(this);
+               break;
            }
-      } 
+       
      } 
-    private void send(Label labelName) throws IOException
+    }
+    private void send(String labelName) throws IOException
     {
         for (Handel pl: players)
         {
-            pl.oos.writeObject(labelName);
+            pl.dos.println(labelName);
         }
     }
 }
