@@ -6,6 +6,8 @@
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,7 +27,19 @@
             <Font name="Cooper Black" size="34.0" />
          </font>
          <effect>
-            <Glow level="0.48" />
+            <Glow level="1.0">
+               <input>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow>
+                           <input>
+                              <Reflection fraction="0.56" topOpacity="0.78" />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </DropShadow>
+               </input>
+            </Glow>
          </effect></Label>
       <BorderPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
          <center>
@@ -39,7 +53,7 @@
                         <DropShadow color="#f0e4afba" height="59.3" radius="25.445" spread="0.66" width="44.48" />
                      </effect>
                   </ImageView>
-                  <Button id="newbtn" layoutX="165.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#newGame" prefHeight="61.0" prefWidth="271.0" style="-fx-background-color: none; -fx-text-fill: white; -fx-font-size: 50; -fx-font-family: chiller; -fx-padding: -5px;" stylesheets="@tictac.css" text="New Game ">
+                  <Button id="newbtn" layoutX="165.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#newGame" prefHeight="61.0" prefWidth="271.0" style="-fx-background-color: none; -fx-text-fill: #afcecf; -fx-font-size: 50; -fx-font-family: chiller; -fx-padding: -5px;" stylesheets="@tictac.css" text="New Game ">
                      <font>
                         <Font name="Franklin Gothic Medium Italic" size="20.0" />
                      </font>
