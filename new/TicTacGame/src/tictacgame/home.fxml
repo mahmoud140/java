@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0">
+          <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@stones.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="57.0" prefWidth="600.0" text=" TIC TAC TOE" textAlignment="CENTER" textFill="#d9ff00">
+               <font>
+                  <Font name="Cooper Black" size="34.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0">
+                     <input>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow>
+                                 <input>
+                                    <Reflection fraction="0.56" topOpacity="0.78" />
+                                 </input>
+                              </InnerShadow>
+                           </input>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
+            </Label>
+            <BorderPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('C:\Users\pc\Desktop\bg.jpg');">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="447.0" layoutX="90.0" layoutY="67.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@board2.jpg" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#f0e4afba" height="59.3" radius="25.445" spread="0.66" width="44.48" />
+                           </effect>
+                        </ImageView>
+                        <Label layoutX="120.0" layoutY="115.0" prefHeight="64.0" prefWidth="171.0" text="Enter Name" textFill="WHITE">
+                           <font>
+                              <Font name="Chiller" size="44.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="317.0" layoutY="132.0" prefHeight="45.0" prefWidth="175.0" promptText="username" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="username" />
+                        <TextField layoutX="319.0" layoutY="225.0" prefHeight="45.0" prefWidth="175.0" promptText="password" style="-fx-border-color: #8b4727; -fx-border-width: 3; -fx-font-size: 18; -fx-border-radius: 6;" text="password" />
+                        <Label layoutX="130.0" layoutY="210.0" prefHeight="64.0" prefWidth="185.0" text="Enter Passord" textFill="WHITE">
+                           <font>
+                              <Font name="Chiller" size="44.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
