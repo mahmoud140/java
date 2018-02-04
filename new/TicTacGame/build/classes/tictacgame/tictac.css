@@ -1,0 +1,6 @@
+.newbtn{
+
+   -fx-background-color: none; 
+   -fx-text-fill: red;
+   -fx-border: none;
+}
